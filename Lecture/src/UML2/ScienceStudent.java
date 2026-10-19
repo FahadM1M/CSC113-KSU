@@ -9,6 +9,10 @@ public class ScienceStudent extends Student {
 		mathHours = 0;
 
 	}
+	
+	public int getMathHours() {
+		return mathHours;
+	}
 
 	public ScienceStudent(String n, int i, double g, int math) {
 		super(n, i , g);

@@ -12,6 +12,11 @@ public class Student {
 		gpa = 0;
 
 	}
+	public Student(Student s) {
+		name = s.name;
+		id = s.id;
+		gpa = s.gpa;
+	}
 
 	public Student(String n, int i, double g) {
 		name = n;
@@ -19,6 +24,7 @@ public class Student {
 		gpa = g;
 
 	}
+	
 
 	public void display() {
 		System.out.println("Name: " + name);

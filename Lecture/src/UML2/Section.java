@@ -138,4 +138,38 @@ public class Section {
 		System.out.println("Size: " + size);
 		System.out.println("Number of students: " + nb);
 	}
+	//Practicing inheritance methods.
+	
+	public double avgMathHours() {
+		double sum = 0;
+		int count = 0;
+		for(int i = 0; i < nb ; i++) {
+			if(list[i] instanceof ScienceStudent) {
+				ScienceStudent mathstudent = (ScienceStudent) list[i];
+				count++;
+				sum += mathstudent.getMathHours();
+				
+			}
+		}
+		if(count == 0) {
+			return 0;
+		}
+		return sum/count;
+	}
+	
+	public double labHours() {
+		int count = 0;
+		double sum = 0;
+		for(int i = 0 ; i < nb ; i++) {
+			if(list[i] instanceof MedicalStudent ) {
+				MedicalStudent medStudent = (MedicalStudent) list[i];
+				count++;
+				sum += medStudent.getLabHours();
+			}
+		}
+		if(count == 0) {
+			return 0;
+		}
+		return sum/count;
+	}
 }

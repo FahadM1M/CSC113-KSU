@@ -14,6 +14,10 @@ public class MedicalStudent extends Student {
 		labHours = lab;
 	}
 	
+	public int getLabHours() {
+		return labHours;
+	}
+	
 	@Override
 	public void display() {
 		super.display();
