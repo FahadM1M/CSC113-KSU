@@ -19,6 +19,11 @@ public class ScienceStudent extends Student {
 		mathHours = math;
 	}
 	
+	public ScienceStudent(ScienceStudent s) {
+		super(s);
+		mathHours = s.mathHours;
+	}
+	
 	@Override
 	public void display() {
 		super.display();

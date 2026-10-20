@@ -1,0 +1,34 @@
+package UML3;
+
+public class ScienceStudent extends Student {
+	
+	private int mathHours;
+
+	public ScienceStudent() {
+		super();
+		mathHours = 0;
+
+	}
+	
+	public int getMathHours() {
+		return mathHours;
+	}
+
+	public ScienceStudent(String n, int i, double g, int math) {
+		super(n, i , g);
+		mathHours = math;
+	}
+	
+	public ScienceStudent(ScienceStudent s) {
+		super(s);
+		mathHours = s.mathHours;
+	}
+	
+	@Override
+	public void display() {
+		super.display();
+		System.out.println("Math hours: " + mathHours);
+		
+	}
+
+}

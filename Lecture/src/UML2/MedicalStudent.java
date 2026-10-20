@@ -17,6 +17,10 @@ public class MedicalStudent extends Student {
 	public int getLabHours() {
 		return labHours;
 	}
+	public MedicalStudent(MedicalStudent m) {
+		super(m);
+		labHours = m.labHours;
+	}
 	
 	@Override
 	public void display() {
