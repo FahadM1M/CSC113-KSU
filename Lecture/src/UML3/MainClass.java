@@ -3,10 +3,10 @@ package UML3;
 public class MainClass {
 
 	public static void main(String[] args) {
-		Student s1 = new Student("A", 777, 4);
-		Student s2 = new Student("B", 67, 5);
-		Student s3 = new Student("C", 88, 2);
-		Student s4 = new Student("D", 111, 5);
+		Student s1 = new MedicalStudent("A", 777, 4, 1);
+		Student s2 = new MedicalStudent("B", 67, 5, 8);
+		Student s3 = new ScienceStudent("C", 88, 2, 3);
+		Student s4 = new ScienceStudent("D", 111, 5, 0);
 		Section sec1 = new Section("CSC113", 20);
 		Section sec2 = new Section("CSC111", 20);
 		Department dep1 = new Department("CS");

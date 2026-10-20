@@ -23,6 +23,9 @@ public class ScienceStudent extends Student {
 		super(s);
 		mathHours = s.mathHours;
 	}
+	public double graduationGift() {
+		return gpa * 1000;
+	}
 	
 	@Override
 	public void display() {

@@ -1,6 +1,6 @@
 package UML3;
 
-public class Student {
+public abstract class Student {
 
 	protected String name;
 	protected int id;
@@ -27,7 +27,7 @@ public class Student {
 	public boolean canGraduate() {
 		return gpa > 2;
 	}
-//	public double graduationGift() {
+	public abstract double graduationGift();
 		
 	
 

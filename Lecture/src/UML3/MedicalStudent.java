@@ -21,6 +21,9 @@ public class MedicalStudent extends Student {
 		super(m);
 		labHours = m.labHours;
 	}
+	public double graduationGift() {
+		return gpa * 2000;
+	}
 	
 	@Override
 	public void display() {
