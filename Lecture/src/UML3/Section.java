@@ -149,9 +149,10 @@ public class Section {
 				count++;
 				sum += m.gpa; 
 			}
-			if(count == 0 ) 
-				return 0;
-		}return sum/count;
+		}
+		if(count == 0 ) 
+			return 0;
+		return sum/count;
 	}
 	public MedicalStudent maxMedWithGPA() {
 	 MedicalStudent max = new MedicalStudent("noName", 1,-1,1);
