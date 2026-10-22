@@ -12,14 +12,6 @@ public class Student extends Person {
 		level = l;
 	}
 
-	public int getSID() {
-		return SID;
-	}
-
-	public int getLevel() {
-		return level;
-	}
-
 	public String toString() {
 		return super.toString() + ", Student ID: " + SID + ", Level: " + level;
 	}
@@ -28,7 +20,7 @@ public class Student extends Person {
 		double p = 0;
 		Scanner reader = new Scanner(System.in);
 
-		while (true) {
+		while (true)
 			try {
 				p = Double.parseDouble(points);
 				break;
@@ -36,7 +28,6 @@ public class Student extends Person {
 				System.out.print("\nError: Incorrect points input.\nPlease enter the number of passed points: ");
 				points = reader.next();
 			}
-		}
 
 		return p / hours;
 	}

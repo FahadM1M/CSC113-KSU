@@ -11,18 +11,6 @@ public class Person {
 		age = a;
 	}
 
-	public String getName() {
-		return name;
-	}
-
-	public int getNID() {
-		return NID;
-	}
-
-	public int getAge() {
-		return age;
-	}
-
 	public String toString() {
 		return "Name: " + name + ", National ID: " + NID + ", Age: " + age;
 	}
