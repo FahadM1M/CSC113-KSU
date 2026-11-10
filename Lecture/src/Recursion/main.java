@@ -5,8 +5,8 @@ public class main {
 	public static void main(String[] args) {
 
 		int a[] = { 1, 2, 3, 4, 5 };
-		int c[] = {1, 2 , 3, 2, 3,};
-		int arr[] = { 1, 2, 4, 3, 5};
+		int c[] = { 1, 2, 3, 2, 3, };
+		int arr[] = { 1, 2, 4, 3, 5 };
 
 		System.out.println("--- Inverse Order ---");
 		printArrayInverse(a, 0, a.length - 1);
@@ -24,22 +24,22 @@ public class main {
 		System.out.println(" = " + sum(10));
 
 		System.out.println("--- Power ---");
-		System.out.println(" = " + power(5, 3));
+		System.out.println(" = " + power(5, 2));
 
 		System.out.println("--- Search ---");
 		System.out.println(search(a, 2, 0, a.length - 1));
 
 		System.out.println("--- Search Counter ---");
-		System.out.println(searchCount(c, 2, 0, c.length - 1));
+		System.out.println(searchCount(c, 2, 0, c.length - 1)); //I'm not sure 
 
 		System.out.println("--- Binary Search ---");
-		System.out.println(binarysearch(a, 2, 0, a.length - 1));
-		
+		System.out.println(binarysearch(a, 2, 0, a.length - 1)); // I'm not sure
+
 		System.out.println("--- Sort Check ---");
-		System.out.println(sortCheck(arr, 0,arr.length));
-		
+		System.out.println(sortCheck(arr, 0, arr.length));
+
 		System.out.println("--- Searching Max ---");
-		System.out.println(searchMax(a, 0,a.length));
+		System.out.println(searchMax(a, 0, a.length));
 	}
 
 	private static void printArrayInverse(int[] a, int start, int end) {
@@ -83,8 +83,12 @@ public class main {
 	public static int power(int x, int n) {
 		if (n == 0) {
 			return 1;
+		}
+		if (n == 1) {
+			System.out.print(x);
+			return x;
 		} else {
-			System.out.println(x + " * " + x);
+			System.out.print(x + " * ");
 			return x * power(x, n - 1);
 		}
 	}
@@ -105,9 +109,9 @@ public class main {
 	}
 
 	public static boolean search(int a[], int target, int start, int end) {
-		if (start == end) {
+		if (start > end) {
 			return false;
-		} else if (target == start) {
+		} else if (target == a[start]) {
 			return true;
 		} else {
 			return search(a, target, start + 1, end);
@@ -115,7 +119,7 @@ public class main {
 	}
 
 	public static int searchCount(int a[], int target, int start, int end) {
-		if (start == end) {
+		if (start > end) {
 			return 0;
 		}
 		if (a[start] == target) {
@@ -124,26 +128,27 @@ public class main {
 			return 0 + searchCount(a, target, start + 1, end);
 		}
 	}
+
 	public static boolean sortCheck(int a[], int start, int end) {
-		if(start == end -1) {
+		if (start >= end - 1) {
 			return true;
 		}
 		System.out.println(a[start] + " , " + a[start + 1]);
-		if( a[start] > a[start + 1]) {
+		if (a[start] > a[start + 1]) {
 			return false;
-		}else {
+		} else {
 			return sortCheck(a, start + 1, end);
 		}
 	}
-	
+
 	public static int searchMax(int a[], int start, int end) {
-		if(start == end -1) {
+		if (start == end - 1) {
 			return a[start];
-		}else {
+		} else {
 			int next = searchMax(a, start + 1, end);
-			if(a[start] > next) {
+			if (a[start] > next) {
 				return a[start];
-			}else {
+			} else {
 				return next;
 			}
 		}
